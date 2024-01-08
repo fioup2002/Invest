@@ -1,0 +1,102 @@
+@import "./_mixin.scss";
+
+html {
+  @include size(100%, 100%);
+  body {
+    font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+    margin: auto;
+    @include size(100%, 100%);
+    @include flex($justify: center);
+    @include font(24);
+    .index {
+      border: 0.01rem solid #000;
+      @include size(7.5rem, 100%);
+      @include flex($dir: column);
+      .menu,
+      .navbar {
+        flex-shrink: 0;
+        @include size($h: 1rem);
+        @include flex();
+        .item {
+          color: #a1a1a1;
+          cursor: pointer;
+          @include size(100%, 100%);
+          @include font(30, $align: center);
+          @include flex($align: center, $justify: center);
+          &.active {
+            color: #fff;
+            background: #087df1;
+          }
+        }
+      }
+      .menu {
+        border-bottom: 0.01rem solid #000;
+        @include size($h: 0.8rem);
+      }
+      .navbar {
+        @include size($h: 1rem);
+      }
+      .info {
+        flex-shrink: 0;
+        border-bottom: 0.01rem solid #000;
+        background: rgba(0, 255, 0, 0.2);
+        @include flex($wrap: wrap);
+        .item {
+          @include size(calc(100% / 4));
+          .label,
+          .text {
+            @include size(100%, 0.4rem);
+            @include flex($align: center, $justify: center);
+            .input {
+              text-align: center;
+              padding: 0;
+              margin: 0;
+              padding-block: 0;
+              padding-inline: 0;
+              border: 0.01rem solid #000;
+              @include size(70%, 80%);
+            }
+          }
+        }
+      }
+      .date {
+        background: rgba(255, 255, 0, 0.2);
+        flex-shrink: 0;
+        border-bottom: 0.01rem solid #000;
+        @include flex($align: center, $justify: center);
+        @include size($h: 0.6rem);
+        .select {
+          margin-left: 0.2rem;
+        }
+      }
+      .detail,
+      .benefit {
+        overflow-y: auto;
+        border-bottom: 0.01rem solid #000;
+        @include size(100%, 100%);
+        .line {
+          @include size($h: 0.4rem);
+          @include flex();
+          .item {
+            @include size(100%, 100%);
+            @include flex($align: center, $justify: center);
+          }
+          &:first-of-type {
+            position: sticky;
+            top: 0;
+            color: #fff;
+            background: #087df1;
+          }
+        }
+      }
+      .detail {
+        background: rgba(255, 255, 0, 0.2);
+      }
+      .benefit {
+        background: rgba(0, 255, 255, 0.2);
+        flex-shrink: 0;
+        @include size($h: 3rem);
+      }
+    }
+  }
+}
