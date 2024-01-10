@@ -154,7 +154,7 @@
                   return res;
                 };
                 const total = getTotal();
-                res.push({ label: "總投資", type: "text", text: `${util.decimalPoint(total.cost / 1000, 4) / 10}萬` });
+                res.push({ label: "總投資", type: "text", text: `${util.decimalPoint(total.cost / 10000, 4)}萬` });
                 res.push({ label: "平均月", type: "text", text: `${util.decimalPoint(total.monthRate * 100, 2)}%` });
                 res.push({ label: "平均年", type: "text", text: `${util.decimalPoint(total.yearRate * 100, 2)}%` });
                 res.push({ label: "月獲利", type: "text", text: `${total.lastMonth}` });

@@ -51,6 +51,7 @@ const data = {
     res.stock.push(this.createStock("00929", 2, 36071, "2023-11-20"));
     res.stock.push(this.createStock("00929", 1, 18065, "2023-11-21"));
     res.stock.push(this.createStock("00929", 2, 37152, "2023-12-06"));
+    res.stock.push(this.createStock("00929", 1, 18836, "2024-01-08"));
     res.fee.push(this.createFee("手續費", "2023-11-10", 48));
    
     return res;
@@ -74,6 +75,7 @@ const data = {
     res.stock.push(this.createStock("00929", 2, 35250, "2023-11-06"));
     res.stock.push(this.createStock("00934", 2, 32346, "2023-11-28"));
     res.stock.push(this.createStock("00934", 2, 32926, "2023-12-06"));
+    res.stock.push(this.createStock("00929", 2, 37713, "2024-01-08"));
     res.fee.push(this.createFee("手續費", "2023-10-05", 86));
     res.fee.push(this.createFee("手續費", "2023-11-03", 82));
     return res;
@@ -104,6 +106,7 @@ const data = {
     res.push(addData("獲利", "2023-12-12", 690));
     res.push(addData("獲利", "2023-12-15", 880));
     res.push(addData("手續費回補", "2024-01-05", 37));
+    res.push(addData("投錢", "2024-01-06", 20000));
     return res;
   },
   createStock(...param) {
