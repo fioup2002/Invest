@@ -53,8 +53,9 @@ const data = {
     res.stock.push(this.createStock("00929", 2, 37152, "2023-12-06"));
     res.stock.push(this.createStock("00929", 1, 18836, "2024-01-08"));
     res.stock.push(this.createStock("00929", 2, 37313, "2024-01-11"));
+    res.stock.push(this.createStock("00929", 2, 37172, "2024-01-12"));
     res.fee.push(this.createFee("手續費", "2023-11-10", 48));
-   
+
     return res;
   },
   createOur() {
@@ -72,7 +73,7 @@ const data = {
     res.stock.push(this.createStock("00929", 2, 34669, "2023-10-04"));
     res.stock.push(this.createStock("00929", 1, 17076, "2023-10-26"));
     res.stock.push(this.createStock("00878", 1, 19716, "2023-10-26"));
-    res.stock.push(this.createStock("00929", 2, 0, "2023-10-30", false,));
+    res.stock.push(this.createStock("00929", 2, 0, "2023-10-30", false));
     res.stock.push(this.createStock("00929", 2, 35250, "2023-11-06"));
     res.stock.push(this.createStock("00934", 2, 32346, "2023-11-28"));
     res.stock.push(this.createStock("00934", 2, 32926, "2023-12-06"));
@@ -120,7 +121,7 @@ const data = {
       total: 0,
       monthRate: 0,
       last: 0,
-      state
+      state,
     };
     return res;
   },
