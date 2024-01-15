@@ -109,7 +109,7 @@ const data = {
     res.push(addData("獲利", "2023-12-15", 880));
     res.push(addData("手續費回補", "2024-01-05", 37));
     res.push(addData("投錢", "2024-01-06", 20000));
-    res.push(addData("獲利", "2023-01-15", 880));
+    res.push(addData("獲利", "2024-01-15", 880));
     return res;
   },
   createStock(...param) {
