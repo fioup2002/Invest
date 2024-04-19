@@ -36,7 +36,7 @@ const data = {
       fee: [],
     };
     res.forex.push(this.createForex("美金", 3000, 0, 31.899, "2023-08-28", 0.0385, 12));
-    res.forex.push(this.createForex("美金", 3000, 0, 31.94, "2023-08-28", 0.045, 6));
+    res.forex.push(this.createForex("美金", 10000, 0, 32.133, "2024-04-28", 0.06, 1));
     res.stock.push(this.createStock("00929", 2, 34529, "2023-10-31"));
     res.stock.push(this.createStock("00929", 2, 34248, "2023-11-01"));
     res.stock.push(this.createStock("00929", 2, 34709, "2023-11-02"));
@@ -59,8 +59,18 @@ const data = {
     res.stock.push(this.createStock("00929", 2, 37172, "2024-01-12"));
     res.stock.push(this.createStock("00929", 2, 37333, "2024-01-15"));
     res.stock.push(this.createStock("00929", 2, 37313, "2024-01-17"));
-    res.fee.push(this.createFee("手續費", "2023-11-10", 48));
-
+    res.stock.push(this.createStock("00929", 2, 41699, "2024-04-01"));
+    res.stock.push(this.createStock("00929", 2, 42240, "2024-04-02"));
+    res.stock.push(this.createStock("00929", 2, 42119, "2024-04-03"));
+    res.stock.push(this.createStock("00929", 2, 42039, "2024-04-08"));
+    res.stock.push(this.createStock("00929", 2, 42039, "2024-04-09"));
+    res.stock.push(this.createStock("00929", 2, 42420, "2024-04-10"));
+    res.stock.push(this.createStock("00929", 2, 42119, "2024-04-11"));
+    res.stock.push(this.createStock("00929", 2, 42180, "2024-04-12"));
+    res.stock.push(this.createStock("00929", 2, 41939, "2024-04-15"));
+    res.stock.push(this.createStock("00929", 2, 40778, "2024-04-16"));
+    res.stock.push(this.createStock("00929", 2, 40898, "2024-04-17"));
+    res.stock.push(this.createStock("00929", 2, 41078, "2024-04-18"));
     return res;
   },
   createOur() {
@@ -87,6 +97,7 @@ const data = {
     res.stock.push(this.createStock("00929", 3, 56209, "2024-02-15"));
     res.stock.push(this.createStock("00929", 3, 57081, "2024-02-16"));
     res.stock.push(this.createStock("00929", 2, 38594, "2024-02-20"));
+    res.stock.push(this.createStock("00929", 2, 41999, "2024-04-08"));
     res.fee.push(this.createFee("手續費", "2023-10-05", 86));
     res.fee.push(this.createFee("手續費", "2023-11-03", 82));
     return res;
@@ -127,6 +138,7 @@ const data = {
     res.push(addData("投錢", "2024-03-16", 20000));
     res.push(addData("獲利", "2024-03-25", 790));
     res.push(addData("獲利", "2024-03-26", 2470));
+    res.push(addData("獲利", "2024-04-16", 2470));
     return res;
   },
   createStock(...param) {
