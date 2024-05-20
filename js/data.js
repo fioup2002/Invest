@@ -27,6 +27,9 @@ const data = {
     res.push(addData("00929", "2024-01-18", 0.13));
     res.push(addData("00929", "2024-02-29", 0.13));
     res.push(addData("00878", "2024-02-27", 0.395));
+    res.push(addData("00929", "2024-03-19", 0.13));
+    res.push(addData("00929", "2024-04-22", 0.2));
+    res.push(addData("00929", "2024-05-21", 0.2));
     return res;
   },
   createMine() {
@@ -79,6 +82,16 @@ const data = {
     res.stock.push(this.createStock("00929", 2, 40077, "2024-04-29"));
     res.stock.push(this.createStock("00929", 2, 40377, "2024-04-30"));
     res.stock.push(this.createStock("00929", 2, 39916, "2024-05-02"));
+    res.stock.push(this.createStock("00929", 2, 40697, "2024-05-03"));
+    res.stock.push(this.createStock("00929", 2, 40677, "2024-05-06"));
+    res.stock.push(this.createStock("00929", 2, 40497, "2024-05-07"));
+    res.stock.push(this.createStock("00929", 2, 40677, "2024-05-09"));
+    res.stock.push(this.createStock("00929", 2, 40397, "2024-05-10"));
+    res.stock.push(this.createStock("00929", 2, 40437, "2024-05-13"));
+    res.stock.push(this.createStock("00929", 2, 40357, "2024-05-14"));
+    res.stock.push(this.createStock("00929", 2, 40677, "2024-05-15"));
+    res.stock.push(this.createStock("00929", 2, 40838, "2024-05-16"));
+    res.stock.push(this.createStock("00929", 2, 40677, "2024-05-17"));
     return res;
   },
   createOur() {
@@ -148,6 +161,7 @@ const data = {
     res.push(addData("獲利", "2024-03-26", 2470));
     res.push(addData("獲利", "2024-04-16", 2470));
     res.push(addData("手續費回補", "2024-05-03", 23));
+    res.push(addData("獲利", "2024-05-20", 4200));
     return res;
   },
   createStock(...param) {
