@@ -92,6 +92,8 @@ const data = {
     res.stock.push(this.createStock("00929", 2, 40677, "2024-05-15"));
     res.stock.push(this.createStock("00929", 2, 40838, "2024-05-16"));
     res.stock.push(this.createStock("00929", 2, 40677, "2024-05-17"));
+    res.stock.push(this.createStock("00929", 2, 40898, "2024-05-20"));
+    res.stock.push(this.createStock("00929", 2, 40517, "2024-05-21"));
     return res;
   },
   createOur() {
