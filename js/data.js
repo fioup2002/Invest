@@ -162,7 +162,6 @@ const data = {
     res.push(addData("獲利", "2024-03-25", 790));
     res.push(addData("獲利", "2024-03-26", 2470));
     res.push(addData("獲利", "2024-04-16", 2470));
-    res.push(addData("手續費回補", "2024-05-03", 23));
     res.push(addData("獲利", "2024-05-20", 4200));
     return res;
   },
