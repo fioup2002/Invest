@@ -213,7 +213,7 @@ const data = {
       const list = this.info[type].stock;
       list.forEach((stock) => {
         if (stock.name == benefit.name) {
-          if (stock.date < benefit.date && stock.state) {
+          if (stock.date <= benefit.date && stock.state) {
             stock.total += benefit.price * stock.amount;
             stock.last = benefit.price * stock.amount;
             stock.monthRate = util.decimalPoint(stock.last / stock.cost / benefit.month, 4);
