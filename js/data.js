@@ -170,8 +170,10 @@ const data = {
     res.push(addData("獲利", "2024-03-26", 2470));
     res.push(addData("獲利", "2024-04-16", 2470));
     res.push(addData("獲利", "2024-05-20", 4200));
+    res.push(addData("手續費回補", "2024-06-05", 4));
     res.push(addData("獲利", "2024-06-13", 1010));
     res.push(addData("獲利", "2024-06-17", 4200));
+    res.push(addData("獲利", "2024-06-21", 90));
     res.push(addData("獲利", "2024-07-16", 4200));
     res.push(addData("獲利", "2024-08-09", 1310));
     res.push(addData("獲利", "2024-08-12", 3780));
