@@ -131,6 +131,7 @@ const data = {
     res.stock.push(this.createStock("00929", 3, 57081, "2024-02-16"));
     res.stock.push(this.createStock("00929", 2, 38594, "2024-02-20"));
     res.stock.push(this.createStock("00929", 2, 41999, "2024-04-08"));
+    res.stock.push(this.createStock("00929", 2, 38314, "2024-09-07"));
     res.fee.push(this.createFee("手續費", "2023-10-05", 86));
     res.fee.push(this.createFee("手續費", "2023-11-03", 82));
     return res;
