@@ -38,6 +38,8 @@ const data = {
     res.push(addData("00934", "2024-08-16", 0.14));
     res.push(addData("00929", "2024-08-20", 0.18));
     res.push(addData("00934", "2024-09-18", 0.142));
+    res.push(addData("00929", "2024-09-19", 0.16));
+    res.push(addData("00929", "2024-10-22", 0.14));
     return res;
   },
   createMine() {
