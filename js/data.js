@@ -107,6 +107,7 @@ const data = {
     res.stock.push(this.createStock("00929", 2, 39536, "2024-09-02"));
     res.stock.push(this.createStock("00929", 2, 38454, "2024-09-04"));
     res.stock.push(this.createStock("00929", 2, 38334, "2024-09-05"));
+    res.stock.push(this.createStock("00929", 2, 37573, "2024-10-09"));
     return res;
   },
   createOur() {
