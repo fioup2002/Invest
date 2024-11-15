@@ -202,6 +202,7 @@ const data = {
     res.push(addData("獲利", "2024-10-15", 558));
     res.push(addData("獲利", "2024-10-16", 3680));
     res.push(addData("獲利", "2024-11-12", 546));
+    res.push(addData("獲利", "2024-11-15", 3220));
     return res;
   },
   createStock(...param) {
