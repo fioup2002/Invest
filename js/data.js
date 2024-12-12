@@ -42,6 +42,9 @@ const data = {
     res.push(addData("00934", "2024-10-17", 0.139));
     res.push(addData("00929", "2024-10-22", 0.14));
     res.push(addData("00934", "2024-11-18", 0.115));
+    res.push(addData("00929", "2024-11-19", 0.11));
+    res.push(addData("00934", "2024-12-17", 0.023));
+    res.push(addData("00929", "2024-12-18", 0.05));
     return res;
   },
   createMine() {
@@ -203,6 +206,7 @@ const data = {
     res.push(addData("獲利", "2024-10-16", 3680));
     res.push(addData("獲利", "2024-11-12", 546));
     res.push(addData("獲利", "2024-11-15", 3220));
+    res.push(addData("獲利", "2024-12-12", 1540));
     return res;
   },
   createStock(...param) {
