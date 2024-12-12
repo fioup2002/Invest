@@ -42,6 +42,7 @@ const data = {
     res.push(addData("00934", "2024-10-17", 0.139));
     res.push(addData("00929", "2024-10-22", 0.14));
     res.push(addData("00934", "2024-11-18", 0.115));
+    res.push(addData("00878", "2024-11-18", 0.55));
     res.push(addData("00929", "2024-11-19", 0.11));
     res.push(addData("00934", "2024-12-17", 0.023));
     res.push(addData("00929", "2024-12-18", 0.05));
