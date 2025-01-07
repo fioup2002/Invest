@@ -212,6 +212,7 @@ const data = {
     res.push(addData("投錢", "2024-12-12", 10000));
     res.push(addData("獲利", "2024-12-13", 2530));
     res.push(addData("獲利", "2024-12-21", 68));
+    res.push(addData("手續費回補", "2025-01-03", 20));
     return res;
   },
   createStock(...param) {
