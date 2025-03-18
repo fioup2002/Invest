@@ -224,6 +224,7 @@ const data = {
     res.push(addData("獲利", "2024-01-13", 82));
     res.push(addData("獲利", "2025-01-14", 1250));
     res.push(addData("獲利", "2025-02-17", 1250));
+    res.push(addData("獲利", "2025-02-20", 94));
     res.push(addData("獲利", "2025-03-17", 990));
     res.push(addData("獲利", "2025-03-17", 1250));
     res.push(addData("獲利", "2025-03-17", 94));
