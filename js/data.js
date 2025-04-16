@@ -129,6 +129,9 @@ const data = {
     res.stock.push(this.createStock("00929", 2, 37833, "2024-10-14"));
     res.stock.push(this.createStock("00929", 2, 36652, "2024-11-04"));
     res.stock.push(this.createStock("00929", 2, 36592, "2024-11-06"));
+    res.stock.push(this.createStock("00929", 2, 30603, "2025-04-09"));
+    res.stock.push(this.createStock("00929", 2, 31665, "2025-04-11"));
+    res.stock.push(this.createStock("00929", 2, 33407, "2025-04-16"));
     return res;
   },
   createOur() {
@@ -228,6 +231,8 @@ const data = {
     res.push(addData("獲利", "2025-03-17", 990));
     res.push(addData("獲利", "2025-03-17", 1250));
     res.push(addData("獲利", "2025-03-17", 94));
+    res.push(addData("獲利", "2025-04-15", 94));
+    res.push(addData("獲利", "2025-04-16", 1250));
     return res;
   },
   createStock(...param) {
