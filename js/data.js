@@ -50,10 +50,16 @@ const data = {
     res.push(addData("00934", "2025-01-17", 0.026));
     res.push(addData("00929", "2025-02-18", 0.05));
     res.push(addData("00934", "2025-02-18", 0.026));
-    res.push(addData("00878", "2025-03-18", 0.5));
+    res.push(addData("00878", "2025-02-20", 0.5));
     res.push(addData("00934", "2025-03-18", 0.026));
     res.push(addData("00929", "2025-03-19", 0.05));
-
+    res.push(addData("00934", "2025-04-18", 0.026));
+    res.push(addData("00929", "2025-04-22", 0.05));
+    res.push(addData("00878", "2025-05-19", 0.47));
+    res.push(addData("00934", "2025-05-19", 0.026));
+    res.push(addData("00929", "2025-05-20", 0.07));
+    res.push(addData("00934", "2025-06-17", 0.028));
+    res.push(addData("00929", "2025-06-18", 0.07));
     return res;
   },
   createMine() {
