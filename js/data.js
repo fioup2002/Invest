@@ -68,8 +68,12 @@ const data = {
       stock: [],
       fee: [],
     };
-    res.forex.push(this.createForex("美金", 3000, 0, 31.899, "2023-08-28", 0.0385, 12));
-    res.forex.push(this.createForex("美金", 10000, 0, 32.133, "2024-04-28", 0.06, 1));
+    res.forex.push(
+      this.createForex("美金", 3000, 0, 31.899, "2023-08-28", 0.0385, 12)
+    );
+    res.forex.push(
+      this.createForex("美金", 10000, 0, 32.133, "2024-04-28", 0.06, 1)
+    );
     res.stock.push(this.createStock("00929", 2, 34529, "2023-10-31"));
     res.stock.push(this.createStock("00929", 2, 34248, "2023-11-01"));
     res.stock.push(this.createStock("00929", 2, 34709, "2023-11-02"));
@@ -146,9 +150,15 @@ const data = {
       stock: [],
       fee: [],
     };
-    res.forex.push(this.createForex("日幣", 0, 10000, 0.2166, "2023-11-15", 0, 0));
-    res.forex.push(this.createForex("日幣", 0, 10000, 0.2166, "2023-11-15", 0, 0));
-    res.forex.push(this.createForex("日幣", 0, 20000, 0.2196, "2023-11-15", 0, 0));
+    res.forex.push(
+      this.createForex("日幣", 0, 10000, 0.2166, "2023-11-15", 0, 0)
+    );
+    res.forex.push(
+      this.createForex("日幣", 0, 10000, 0.2166, "2023-11-15", 0, 0)
+    );
+    res.forex.push(
+      this.createForex("日幣", 0, 20000, 0.2196, "2023-11-15", 0, 0)
+    );
     res.stock.push(this.createStock("00878", 1, 20849, "2023-09-15"));
     res.stock.push(this.createStock("00929", 1, 18326, "2023-09-15"));
     res.stock.push(this.createStock("00929", 2, 36632, "2023-09-18"));
@@ -245,6 +255,7 @@ const data = {
     res.push(addData("獲利", "2025-06-13", 930));
     res.push(addData("獲利", "2025-06-16", 1750));
     res.push(addData("獲利", "2025-06-21", 45));
+    res.push(addData("獲利", "2025-07-21", 105));
     return res;
   },
   createStock(...param) {
@@ -262,7 +273,15 @@ const data = {
     return res;
   },
   createForex(...param) {
-    const { 0: name, 1: forex, 2: twd, 3: buyRate, 4: date, 5: yearRate, 6: month } = param;
+    const {
+      0: name,
+      1: forex,
+      2: twd,
+      3: buyRate,
+      4: date,
+      5: yearRate,
+      6: month,
+    } = param;
     const forexCost = forex == 0 ? twd / buyRate : forex;
     const twdCost = forex == 0 ? twd : forex * buyRate;
     const res = {
@@ -296,7 +315,10 @@ const data = {
           if (stock.date <= benefit.date && stock.state) {
             stock.total += benefit.price * stock.amount;
             stock.last = benefit.price * stock.amount;
-            stock.monthRate = util.decimalPoint(stock.last / stock.cost / benefit.month, 4);
+            stock.monthRate = util.decimalPoint(
+              stock.last / stock.cost / benefit.month,
+              4
+            );
           }
         }
       });
