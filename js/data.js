@@ -60,6 +60,11 @@ const data = {
     res.push(addData("00929", "2025-05-20", 0.07));
     res.push(addData("00934", "2025-06-17", 0.028));
     res.push(addData("00929", "2025-06-18", 0.07));
+    res.push(addData("00934", "2025-07-16", 0.077));
+    res.push(addData("00929", "2025-07-17", 0.07));
+    res.push(addData("00934", "2025-08-18", 0.077));
+    res.push(addData("00878", "2025-08-18", 0.4));
+    res.push(addData("00929", "2025-08-19", 0.08));
     return res;
   },
   createMine() {
