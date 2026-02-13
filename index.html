@@ -1,11 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="./style/index.min.css" />
     <script src="./js/vue-3.3.8.min.js"></script>
     <script src="./js/util.js"></script>
@@ -24,11 +21,7 @@
       <div v-if="menuIndex != 2 && navbar.index != 2 " class="date">
         <div class="text">時間:</div>
         <select class="select" v-model="date.year.select">
-          <option
-            v-for="i in years"
-            :value="i+date.year.min-1"
-            v-html="`${i+date.year.min-1}年`"
-          ></option>
+          <option v-for="i in years" :value="i+date.year.min-1" v-html="`${i+date.year.min-1}年`"></option>
         </select>
         <select class="select" v-model="date.month.select">
           <option value="0">整年</option>
@@ -46,20 +39,10 @@
         </div>
       </div>
       <div class="menu">
-        <div
-          :class="['item', {active: i == menuIndex}]"
-          v-for="(item,i) in menus"
-          v-html="item"
-          @click="menuIndex = i"
-        ></div>
+        <div :class="['item', {active: i == menuIndex}]" v-for="(item,i) in menus" v-html="item" @click="menuIndex = i"></div>
       </div>
       <div class="navbar">
-        <div
-          :class="['item', {active: i == navbar.index}]"
-          v-for="(item,i) in navbarList"
-          v-html="item"
-          @click="i != 3 ? navbar.index = i:''"
-        ></div>
+        <div :class="['item', {active: i == navbar.index}]" v-for="(item,i) in navbarList" v-html="item" @click="i != 3 ? navbar.index = i:''"></div>
       </div>
     </div>
     <script>
@@ -145,12 +128,8 @@
             stock: [],
             fee: [],
           };
-          res.forex.push(
-            this.createForex("美金", 3000, 0, 31.899, "2023-08-28", 0.0385, 12)
-          );
-          res.forex.push(
-            this.createForex("美金", 10000, 0, 32.133, "2024-04-28", 0.06, 1)
-          );
+          res.forex.push(this.createForex("美金", 3000, 0, 31.899, "2023-08-28", 0.0385, 12));
+          res.forex.push(this.createForex("美金", 10000, 0, 32.133, "2024-04-28", 0.06, 1));
           res.stock.push(this.createStock("00929", 2, 34529, "2023-10-31"));
           res.stock.push(this.createStock("00929", 2, 34248, "2023-11-01"));
           res.stock.push(this.createStock("00929", 2, 34709, "2023-11-02"));
@@ -237,15 +216,9 @@
             stock: [],
             fee: [],
           };
-          res.forex.push(
-            this.createForex("日幣", 0, 10000, 0.2166, "2023-11-15", 0, 0)
-          );
-          res.forex.push(
-            this.createForex("日幣", 0, 10000, 0.2166, "2023-11-15", 0, 0)
-          );
-          res.forex.push(
-            this.createForex("日幣", 0, 20000, 0.2196, "2023-11-15", 0, 0)
-          );
+          res.forex.push(this.createForex("日幣", 0, 10000, 0.2166, "2023-11-15", 0, 0));
+          res.forex.push(this.createForex("日幣", 0, 10000, 0.2166, "2023-11-15", 0, 0));
+          res.forex.push(this.createForex("日幣", 0, 20000, 0.2196, "2023-11-15", 0, 0));
           res.stock.push(this.createStock("00878", 1, 20849, "2023-09-15"));
           res.stock.push(this.createStock("00929", 1, 18326, "2023-09-15"));
           res.stock.push(this.createStock("00929", 2, 36632, "2023-09-18"));
@@ -359,16 +332,11 @@
           res.push(addData("獲利", "2025-12-21", 89));
           res.push(addData("獲利", "2026-01-13", 518));
           res.push(addData("獲利", "2025-01-14", 2250));
+          res.push(addData("獲利", "2025-02-13", 2500));
           return res;
         },
         createStock(...param) {
-          const {
-            0: name,
-            1: amount,
-            2: cost,
-            3: date,
-            4: state = true,
-          } = param;
+          const { 0: name, 1: amount, 2: cost, 3: date, 4: state = true } = param;
           const res = {
             name,
             amount,
@@ -382,15 +350,7 @@
           return res;
         },
         createForex(...param) {
-          const {
-            0: name,
-            1: forex,
-            2: twd,
-            3: buyRate,
-            4: date,
-            5: yearRate,
-            6: month,
-          } = param;
+          const { 0: name, 1: forex, 2: twd, 3: buyRate, 4: date, 5: yearRate, 6: month } = param;
           const forexCost = forex == 0 ? twd / buyRate : forex;
           const twdCost = forex == 0 ? twd : forex * buyRate;
           const res = {
@@ -424,10 +384,7 @@
                 if (stock.date <= benefit.date && stock.state) {
                   stock.total += benefit.price * stock.amount;
                   stock.last = benefit.price * stock.amount;
-                  stock.monthRate = util.decimalPoint(
-                    stock.last / stock.cost / benefit.month,
-                    4
-                  );
+                  stock.monthRate = util.decimalPoint(stock.last / stock.cost / benefit.month, 4);
                 }
               }
             });
@@ -479,7 +436,7 @@
               if (newValue == 2) {
                 state.menuIndex = 0;
               }
-            }
+            },
           );
           const navbarList = computed(() => {
             const res = ["自己", "共同", "房貸試算"];
@@ -528,8 +485,7 @@
                     lastMonth: 0,
                   };
                   const array = [];
-                  const { stock: stocks, fee: fees } =
-                    state.navbar.index == 0 ? data.info.mine : data.info.our;
+                  const { stock: stocks, fee: fees } = state.navbar.index == 0 ? data.info.mine : data.info.our;
                   stocks.forEach((stock) => {
                     res.cost += stock.cost;
                     if (stock.monthRate != 0) {
@@ -542,16 +498,7 @@
                     res.fee += fee.value;
                   });
                   res.benefit += res.fee;
-                  res.monthRate =
-                    array.length != 0
-                      ? util.decimalPoint(
-                          array.reduce(
-                            (previous, current) => (current += previous),
-                            0
-                          ) / array.length,
-                          4
-                        )
-                      : 0;
+                  res.monthRate = array.length != 0 ? util.decimalPoint(array.reduce((previous, current) => (current += previous), 0) / array.length, 4) : 0;
                   res.yearRate = util.decimalPoint(res.monthRate * 12, 4);
                   return res;
                 };
@@ -595,29 +542,15 @@
                     benefit: 0,
                   };
                   const array = [];
-                  const { forex } =
-                    state.navbar.index == 0 ? data.info.mine : data.info.our;
+                  const { forex } = state.navbar.index == 0 ? data.info.mine : data.info.our;
                   forex.forEach((item) => {
                     res.cost += item.cost.twd;
                     if (item.yearRate != 0) {
                       array.push(item.yearRate);
                     }
-                    res.benefit += util.decimalPoint(
-                      (item.cost.forex + item.totalBenefit) *
-                        state.input[item.exchangeType] -
-                        item.cost.twd
-                    );
+                    res.benefit += util.decimalPoint((item.cost.forex + item.totalBenefit) * state.input[item.exchangeType] - item.cost.twd);
                   });
-                  res.yearRate =
-                    array.length != 0
-                      ? util.decimalPoint(
-                          array.reduce(
-                            (previous, current) => (current += previous),
-                            0
-                          ) / array.length,
-                          4
-                        )
-                      : 0;
+                  res.yearRate = array.length != 0 ? util.decimalPoint(array.reduce((previous, current) => (current += previous), 0) / array.length, 4) : 0;
                   res.monthRate = util.decimalPoint(res.yearRate / 12, 4);
                   return res;
                 };
@@ -685,11 +618,7 @@
                       res.account.benefit += value;
                     }
                   });
-                  res.account.left =
-                    res.account.total +
-                    res.account.fee +
-                    res.account.benefit -
-                    res.cost.total;
+                  res.account.left = res.account.total + res.account.fee + res.account.benefit - res.cost.total;
                   res.benefit.left = res.benefit.total - res.account.benefit;
                   changeUnit(res);
                   return res;
@@ -779,11 +708,7 @@
               res.push({
                 label: "總支出",
                 type: "text",
-                text: `${
-                  util.decimalPoint(
-                    (loan.value.interest + Number(total)) / 1000
-                  ) / 10
-                }萬`,
+                text: `${util.decimalPoint((loan.value.interest + Number(total)) / 1000) / 10}萬`,
               });
               res.push({ label: "負擔比例", type: "input", value: "radio" });
             }
@@ -807,64 +732,22 @@
             }
             if (state.navbar.index != 2) {
               if (state.menuIndex == 0) {
-                res.push([
-                  "項目",
-                  "張數",
-                  "花費",
-                  "日期",
-                  "總獲利",
-                  "最近獲利",
-                  "月利率",
-                ]);
-                const { stock: stocks } =
-                  state.navbar.index == 0 ? data.info.mine : data.info.our;
+                res.push(["項目", "張數", "花費", "日期", "總獲利", "最近獲利", "月利率"]);
+                const { stock: stocks } = state.navbar.index == 0 ? data.info.mine : data.info.our;
                 stocks.forEach((stock) => {
-                  const { name, amount, cost, date, total, last, monthRate } =
-                    stock;
+                  const { name, amount, cost, date, total, last, monthRate } = stock;
                   if (date >= start && date < end) {
-                    res.push([
-                      name,
-                      amount,
-                      cost,
-                      util.formateDate(date, "MM-DD"),
-                      total,
-                      last,
-                      monthRate,
-                    ]);
+                    res.push([name, amount, cost, util.formateDate(date, "MM-DD"), total, last, monthRate]);
                   }
                 });
               } else if (state.menuIndex == 1) {
-                res.push([
-                  "項目",
-                  "買(外)",
-                  "買(台)",
-                  "年利率",
-                  "日期",
-                  "期間",
-                  "獲利(外)",
-                  "獲利(台)",
-                ]);
-                const { forex } =
-                  state.navbar.index == 0 ? data.info.mine : data.info.our;
+                res.push(["項目", "買(外)", "買(台)", "年利率", "日期", "期間", "獲利(外)", "獲利(台)"]);
+                const { forex } = state.navbar.index == 0 ? data.info.mine : data.info.our;
                 forex.forEach((item) => {
-                  const { name, cost, yearRate, date, totalBenefit, month } =
-                    item;
-                  const twdBenefit = util.decimalPoint(
-                    (cost.forex + totalBenefit) *
-                      state.input[item.exchangeType] -
-                      cost.twd
-                  );
+                  const { name, cost, yearRate, date, totalBenefit, month } = item;
+                  const twdBenefit = util.decimalPoint((cost.forex + totalBenefit) * state.input[item.exchangeType] - cost.twd);
                   if (date >= start && date < end) {
-                    res.push([
-                      name,
-                      cost.forex,
-                      cost.twd,
-                      yearRate,
-                      util.formateDate(date, "MM-DD"),
-                      `${month}月`,
-                      totalBenefit,
-                      twdBenefit,
-                    ]);
+                    res.push([name, cost.forex, cost.twd, yearRate, util.formateDate(date, "MM-DD"), `${month}月`, totalBenefit, twdBenefit]);
                   }
                 });
               } else if (state.menuIndex == 2) {
@@ -875,14 +758,7 @@
                 });
               }
             } else {
-              res.push([
-                "月數",
-                "本金償還",
-                "利息償還",
-                "月付",
-                "Ling負擔",
-                "Ice負擔",
-              ]);
+              res.push(["月數", "本金償還", "利息償還", "月付", "Ling負擔", "Ice負擔"]);
               loan.value.list.forEach((item) => {
                 const { month, backCapital, interest, total } = item;
                 const ling = util.decimalPoint(total * state.input.radio);
@@ -897,12 +773,7 @@
             res.push(["項目", "日期", "除息", "頻率"]);
             data.info.benefit.forEach((benefit) => {
               const { name, date, price, month } = benefit;
-              res.push([
-                name,
-                util.formateDate(date, "YYYY-MM-DD"),
-                price,
-                month == 3 ? "每季" : "每月",
-              ]);
+              res.push([name, util.formateDate(date, "YYYY-MM-DD"), price, month == 3 ? "每季" : "每月"]);
             });
             return res;
           });
@@ -922,12 +793,8 @@
               const totalCapital = util.decimalPoint(total * loanLevel);
               if (state.menuIndex == 1) {
                 const addLoan = (month, capital) => {
-                  const backCapital = util.decimalPoint(
-                    totalCapital / (loanYear * 12)
-                  );
-                  const interest = util.decimalPoint(
-                    (capital * loanRate) / 100 / 12
-                  );
+                  const backCapital = util.decimalPoint(totalCapital / (loanYear * 12));
+                  const interest = util.decimalPoint((capital * loanRate) / 100 / 12);
                   const left = util.decimalPoint(capital - backCapital);
                   const total = util.decimalPoint(backCapital + interest);
                   const obj = {
@@ -940,17 +807,12 @@
                   res.list.push(obj);
                 };
                 for (let i = 0; i < loanYear * 12; i++) {
-                  const capital =
-                    res.list.length == 0
-                      ? totalCapital
-                      : res.list[res.list.length - 1].capital;
+                  const capital = res.list.length == 0 ? totalCapital : res.list[res.list.length - 1].capital;
                   addLoan(i + 1, capital);
                 }
               } else if (state.menuIndex == 0) {
                 const addLoan = (month, total, capital) => {
-                  const interest = util.decimalPoint(
-                    (capital * loanRate) / 100 / 12
-                  );
+                  const interest = util.decimalPoint((capital * loanRate) / 100 / 12);
                   const backCapital = util.decimalPoint(total - interest);
                   const left = util.decimalPoint(capital - backCapital);
                   const obj = {
@@ -964,16 +826,9 @@
                 };
                 const monthRate = loanRate / 12 / 100;
                 const month = loanYear * 12;
-                const total = util.decimalPoint(
-                  ((Math.pow(1 + monthRate, month) * monthRate) /
-                    (Math.pow(1 + monthRate, month) - 1)) *
-                    totalCapital
-                );
+                const total = util.decimalPoint(((Math.pow(1 + monthRate, month) * monthRate) / (Math.pow(1 + monthRate, month) - 1)) * totalCapital);
                 for (let i = 0; i < loanYear * 12; i++) {
-                  const capital =
-                    res.list.length == 0
-                      ? totalCapital
-                      : res.list[res.list.length - 1].capital;
+                  const capital = res.list.length == 0 ? totalCapital : res.list[res.list.length - 1].capital;
                   addLoan(i + 1, total, capital);
                 }
               }
