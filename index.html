@@ -360,6 +360,7 @@
           res.push(addData("獲利", "2026-06-12", 1310));
           res.push(addData("獲利", "2026-06-12", 990));
           res.push(addData("獲利", "2026-06-15", 3250));
+          res.push(addData("虧損", "2026-06-15", -107));
           return res;
         },
         createStock(...param) {
@@ -641,7 +642,7 @@
                       res.account.total += value;
                     } else if (name == "手續費回補") {
                       res.account.fee += value;
-                    } else if (name == "獲利") {
+                    } else if (name == "獲利" || name == "虧損") {
                       res.account.benefit += value;
                     }
                   });
