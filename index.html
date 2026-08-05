@@ -257,7 +257,6 @@
           res.fee.push(this.createFee("手續費", "2023-11-03", 82));
           res.stock.push(this.createStock("2330", 0.01, 24034, "2026-06-29"));
           res.stock.push(this.createStock("2330", 0.01, 23383, "2026-07-22"));
-          res.stock.push(this.createStock("2330", 0.005, 11065, "2026-07-31"));
           return res;
         },
         createAccount() {
@@ -369,6 +368,7 @@
           res.push(addData("獲利", "2026-07-14", 6500));
           res.push(addData("獲利", "2026-07-14", 990));
           res.push(addData("手續費回補", "2024-08-05", 19));
+          res.push(addData("賣出", "2026-08-05", 11874));
           return res;
         },
         createStock(...param) {
